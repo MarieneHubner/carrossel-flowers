@@ -1,0 +1,115 @@
+@charset "utf-8";
+@font-face {
+    font-family: fontes2;
+    src: url(fontes/flower_days/FlowerDaysDemoRegular.ttf);
+}
+h1{
+    font-family: fontes2;
+    font-size: 200%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* "v"funciona como % "vh" usamos para definir altura e "vw" largura */
+    width: 100vw;
+    /* "xxvh ou xxvw" irá usar xx% do total da tela na altura ou largura*/
+    text-align: center;
+    font-style: italic;
+    font-size: 120%;
+    color: rgb(236, 245, 251);
+    background-image: linear-gradient(rgb(226, 63, 63), rgb(182, 127, 226), rgb(247, 194, 49));
+    
+}
+
+.container {
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    /* Possibilita mexer e posicionar a imagem/item */
+    top: 50%;
+    /* Funciona como margin-top*/
+    left: 50%;
+    /* Funciona como margin-left*/
+    transform: translate(-50%, -50%);
+    border-radius: 2%;
+    /* Usado para modificar a posição do eixo central da imagem/item (a referência costuma ser na ponta e não no centro, por isso precisamos ajustar a posição do eixo)*/
+}
+
+
+.imagem img {
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+    border-radius: 2%;
+}
+
+.bar {
+    background-color: rgb(178, 68, 211);
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar:hover {
+    background: rgb(160, 37, 143);
+}
+
+input {
+    display: none;
+}
+
+.imagens {
+    display: flex;
+    width: 600%;
+    height: 100%;
+}
+
+.imagem {
+    width: 16.6666666667%;
+    transition: .4s;
+
+}
+
+#imagem1:checked ~ .img1 {
+    margin-left: 0;
+}
+
+#imagem2:checked ~ .img1 {
+    margin-left: -16.6666666667%;
+}
+
+#imagem3:checked ~ .img1 {
+    margin-left: -33.3333333333%;
+}
+
+#imagem4:checked ~ .img1 {
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1 {
+    margin-left: -83.3333333333%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.3em;
+}
